@@ -31,6 +31,82 @@ const combinedChannels = [
     logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/fxx-us.png?raw=true",
     url: "https://fl51.moveonjoy.com/FXX/index.m3u8" },
 
+  { name: "MGM+", type: "hls", category: "Movie Channels", live: true,
+    logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/mgm-plus-us.png?raw=true",
+    url: "https://fl51.moveonjoy.com/EPIX/index.m3u8" },
+
+  { name: "MGM+ Drive-In", type: "hls", category: "Movie Channels", live: true,
+    logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/mgm-plus-drive-in-us.png?raw=true",
+    url: "https://fl51.moveonjoy.com/EPIX_DRIVE_IN/index.m3u8" },
+
+  { name: "MGM+ HITS", type: "hls", category: "Movie Channels", live: true,
+    logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/mgm-plus-hits-us.png?raw=true",
+    url: "https://fl51.moveonjoy.com/EPIX_HITS/index.m3u8" },
+
+  { name: "Showtime", type: "hls", category: "Movie Channels", live: true,
+    logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/showtime-us.png?raw=true",
+    url: "https://fl51.moveonjoy.com/SHOWTIME/index.m3u8" },
+
+  { name: "Showtime 2", type: "hls", category: "Movie Channels", live: true,
+    logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/showtime-2-us.png?raw=true",
+    url: "https://fl51.moveonjoy.com/SHOWTIME_2/index.m3u8" },
+
+  { name: "Showtime Extreme", type: "hls", category: "Movie Channels", live: true,
+    logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/showtime-extreme-us.png?raw=true",
+    url: "https://fl51.moveonjoy.com/SHOWTIME_EXTREME/index.m3u8" },
+
+  { name: "Showtime Next", type: "hls", category: "Movie Channels", live: true,
+    logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/showtime-next-us.png?raw=true",
+    url: "https://fl51.moveonjoy.com/SHOWTIME_NEXT/index.m3u8" },
+
+  { name: "Showtime West", type: "hls", category: "Movie Channels", live: true,
+    logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/showtime-us.png?raw=true",
+    url: "https://fl51.moveonjoy.com/SHOWTIME_WEST/index.m3u8" },
+
+  { name: "Showtime Women", type: "hls", category: "Movie Channels", live: true,
+    logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/showtime-women-us.png?raw=true",
+    url: "https://fl51.moveonjoy.com/SHOWTIME_WOMEN/index.m3u8" },
+
+  { name: "Start TV", type: "hls", category: "Movie Channels", live: true,
+    logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/start-tv-us.png?raw=true",
+    url: "https://fl51.moveonjoy.com/Start_Tv/index.m3u8" },
+
+  { name: "Starz", type: "hls", category: "Movie Channels", live: true,
+    logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/starz-us.png?raw=true",
+    url: "https://fl51.moveonjoy.com/STARZ/index.m3u8" },
+
+  { name: "Starz Comedy", type: "hls", category: "Movie Channels", live: true,
+    logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/starz-comedy-us.png?raw=true",
+    url: "https://fl51.moveonjoy.com/STARZ_COMEDY/index.m3u8" },
+
+  { name: "Starz Edge", type: "hls", category: "Movie Channels", live: true,
+    logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/starz-edge-us.png?raw=true",
+    url: "https://fl51.moveonjoy.com/STARZ_EDGE/index.m3u8" },
+
+  { name: "Starz Encore Action", type: "hls", category: "Movie Channels", live: true,
+    logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/starz-encore-action-us.png?raw=true",
+    url: "https://fl51.moveonjoy.com/STARZ_ENCORE_ACTION/index.m3u8" },
+
+  { name: "Starz Encore Classic", type: "hls", category: "Movie Channels", live: true,
+    logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/starz-encore-classic-us.png?raw=true",
+    url: "https://fl51.moveonjoy.com/STARZ_ENCORE_CLASSIC/index.m3u8" },
+
+  { name: "Starz Encore Westerns", type: "hls", category: "Movie Channels", live: true,
+    logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/starz-encore-westerns-us.png?raw=true",
+    url: "https://fl51.moveonjoy.com/STARZ_ENCORE_WESTERNS/index.m3u8" },
+
+  { name: "Starz West", type: "hls", category: "Movie Channels", live: true,
+    logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/starz-us.png?raw=true",
+    url: "https://fl51.moveonjoy.com/STARZ_WEST/index.m3u8" },
+
+  { name: "SundanceTV", type: "hls", category: "Movie Channels", live: true,
+    logo: "http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16108_dark_360w_270h.png",
+    url: "https://fl51.moveonjoy.com/SUNDANCE/index.m3u8" },
+
+  { name: "SYFY", type: "hls", category: "Movie Channels", live: true,
+    logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/syfy-us.png?raw=true",
+    url: "https://fl51.moveonjoy.com/SYFY/index.m3u8" },
+
   /* ---------- DASH STREAMS (ClearKey) ---------- */
   {
     name: "A2Z",

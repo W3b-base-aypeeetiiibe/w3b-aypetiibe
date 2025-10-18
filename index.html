@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NZM IPTV</title>
+  <link rel="icon" href="nzm.png" />
+  <link href="https://cdn.jsdelivr.net/npm/hls.js@latest" rel="preload" as="script">
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/shaka-player@4.9.2/dist/shaka-player.compiled.min.js"></script>
+  <style>
+    :root {
+      --bg: #000;
+      --card: #111;
+      --text: #fff;
+      --muted: #999;
+      --accent: #00ffe7;
+    }
+    *{box-sizing:border-box;font-family:'Poppins',sans-serif;}
+    body {
+      margin:0;background:var(--bg);color:var(--text);
+      display:flex;flex-direction:column;align-items:center;overflow-x:hidden;
+    }
+    header {
+      display:flex;align-items:center;justify-content:space-between;
+      width:100%;padding:10px 14px;position:sticky;top:0;
+      background:rgba(0,0,0,0.75);backdrop-filter:blur(8px);z-index:50;
+    }
+    header .left{display:flex;align-items:center;gap:10px;}
+    header img.logo{height:42px;}
+    header h1{font-size:22px;color:var(--accent);margin:0;font-weight:700;}
+    #searchInput{
+      flex:1;margin:0 10px;padding:8px 12px;border:none;border-radius:20px;
+      background:rgba(255,255,255,0.08);color:#fff;outline:none;font-size:14px;
+    }
+    .btn{
+      background:rgba(255,255,255,0.08);
+      border:none;border-radius:8px;padding:6px 12px;
+      color:var(--text);cursor:pointer;font-size:13px;
+      transition:.2s;
+    }
+    .btn:hover{background:rgba(255,255,255,0.18);}
+    #content{width:100%;max-width:1200px;padding:10px;}
+    .row{margin-bottom:20px;}
+    .row-header{
+      display:flex;align-items:center;justify-content:space-between;
+      margin-bottom:6px;
+    }
+    .row-title{font-weight:600;font-size:17px;}
+    .carousel{
+      display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;
+    }
+    .carousel::-webkit-scrollbar{display:none;}
+    .card{
+      background:var(--card);border-radius:12px;padding:8px;width:160px;
+      flex-shrink:0;cursor:pointer;position:relative;transition:transform .2s;
+    }
+    .card:hover{transform:scale(1.04);}
+    .card img{width:100%;height:90px;object-fit:cover;border-radius:8px;}
+    .card .name{text-align:center;margin-top:5px;font-size:14px;font-weight:500;}
+    .badge-live{
+      position:absolute;top:6px;left:6px;
+      background:#007bff;color:#fff;font-size:11px;
+      padding:2px 5px;border-radius:4px;
+    }
+    .fav-toggle{
+      position:absolute;top:6px;right:6px;
+      font-size:14px;color:var(--accent);cursor:pointer;
+    }
+
+    /* Overlay Player */
+    .overlay{
+      position:fixed;inset:0;background:#000;display:none;
+      justify-content:center;align-items:center;z-index:2000;
+    }
+    .overlay.active{display:flex;}
+    .player-wrap{
+      position:relative;width:100%;height:100%;
+      display:flex;justify-content:center;align-items:center;
+    }
+    video{
+      width:100%;height:100%;background:#000;
+    }
+    .spinner{
+      position:absolute;top:50%;left:50%;
+      transform:translate(-50%,-50%);
+      border:4px solid rgba(255,255,255,0.2);
+      border-top-color:var(--accent);
+      border-radius:50%;width:45px;height:45px;
+      animation:spin 1s linear infinite;z-index:5;
+    }
+    @keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg);}}
+    .now-playing{
+      position:absolute;top:14px;right:14px;
+      display:flex;align-items:center;
+      background:rgba(0,0,0,0.6);
+      padding:6px 10px;border-radius:10px;
+      font-size:13px;gap:6px;z-index:20;
+    }
+    .now-playing img{width:28px;height:28px;border-radius:6px;}
+    .minimize-btn{
+      position:absolute;bottom:14px;right:14px;
+      background:rgba(0,0,0,0.6);border:none;
+      color:#fff;padding:8px 10px;font-size:16px;
+      border-radius:8px;cursor:pointer;z-index:20;
+    }
+    #miniPlayer{
+      position:fixed;bottom:10px;right:10px;
+      width:180px;height:110px;z-index:3000;
+      border-radius:8px;overflow:hidden;display:none;
+      box-shadow:0 0 10px rgba(0,0,0,0.6);
+    }
+    #miniPlayer video{width:100%;height:100%;object-fit:cover;}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="left">
+      <img src="nzmm.png" class="logo" alt="logo">
+      <h1>NZM IPTV</h1>
+    </div>
+    <input id="searchInput" type="text" placeholder="Search channels..." />
+    <button id="installBtn" class="btn">📲 Install</button>
+    <button id="favoritesTab" class="btn">❤ Favorites</button>
+  </header>
+
+  <div id="content"></div>
+
+  <div id="installPopup" style="display:none;">
+    Install NZM IPTV for quick access 📲
+    <button id="popupInstall" class="btn" style="background:#fff;color:#000;margin-left:8px;">Install</button>
+  </div>
+
+  <!-- Overlay Player -->
+  <div class="overlay" id="overlay" aria-hidden="true">
+    <div class="player-wrap" id="playerWrap">
+      <div class="spinner" id="loadingSpinner"></div>
+      <video id="playerVideo" playsinline></video>
+
+      <!-- Now Playing steady overlay -->
+      <div class="now-playing" id="nowPlayingOverlay">
+        <img id="npLogo" src="" alt="logo">
+        <span id="npTitle">Now Playing</span>
+      </div>
+
+      <!-- Minimize (PiP) button -->
+      <button class="minimize-btn" id="minimizeBtn">⤢</button>
+    </div>
+  </div>
+
+  <!-- Mini PiP player -->
+  <div id="miniPlayer">
+    <video id="miniVideo" autoplay muted playsinline></video>
+      </div>
+
+  <script>
+let favorites = JSON.parse(localStorage.getItem('iptv_favs')||'[]');
+const overlay = document.getElementById('overlay');
+const playerVideo = document.getElementById('playerVideo');
+const miniPlayer = document.getElementById('miniPlayer');
+const miniVideo = document.getElementById('miniVideo');
+const loadingSpinner = document.getElementById('loadingSpinner');
+const npLogo = document.getElementById('npLogo');
+const npTitle = document.getElementById('npTitle');
+const minimizeBtn = document.getElementById('minimizeBtn');
+const content = document.getElementById('content');
+const searchInput = document.getElementById('searchInput');
+const favoritesTab = document.getElementById('favoritesTab');
+let combinedChannels = [], hls = null;
+
+/* ------------------ Basic Player Control ------------------ */
+function stopAll(){
+  if(hls){try{hls.destroy();}catch{}hls=null;}
+  playerVideo.pause(); playerVideo.removeAttribute('src'); playerVideo.load();
+}
+
+/* open a channel */
+async function openPlayer(ch){
+  try{ if(document.pictureInPictureElement) await document.exitPictureInPicture(); }catch{}
+  stopAll(); overlay.classList.add('active'); overlay.setAttribute('aria-hidden','false');
+  loadingSpinner.style.display='block';
+  npLogo.src = ch.logo || 'logo.png';
+  npTitle.textContent = ch.name;
+
+  // force fullscreen + landscape
+  const wrap = document.getElementById('playerWrap');
+  if(!document.fullscreenElement){
+    await wrap.requestFullscreen().catch(()=>{});
+    if(screen.orientation && screen.orientation.lock) screen.orientation.lock('landscape').catch(()=>{});
+  }
+
+  playerVideo.style.display='block';
+  playerVideo.autoplay = true;
+  playerVideo.controls = false;
+  playerVideo.muted = false;
+
+  // load stream
+  if(Hls.isSupported()){
+    hls = new Hls();
+    hls.loadSource(ch.url);
+    hls.attachMedia(playerVideo);
+    hls.on(Hls.Events.MANIFEST_PARSED,()=>{ loadingSpinner.style.display='none'; playerVideo.play().catch(()=>{}); });
+    hls.on(Hls.Events.ERROR,()=>{ loadingSpinner.style.display='none'; });
+  }else if(playerVideo.canPlayType('application/vnd.apple.mpegurl')){
+    playerVideo.src = ch.url;
+    playerVideo.oncanplay = ()=>{ loadingSpinner.style.display='none'; playerVideo.play().catch(()=>{}); };
+  }else{
+    playerVideo.src = ch.url;
+    playerVideo.onloadeddata = ()=>{ loadingSpinner.style.display='none'; playerVideo.play().catch(()=>{}); };
+  }
+}
+
+/* minimize -> PiP */
+minimizeBtn.onclick = async ()=>{
+  try{
+    await playerVideo.requestPictureInPicture();
+    overlay.classList.remove('active');
+    overlay.setAttribute('aria-hidden','true');
+  }catch{ alert('PiP not supported'); }
+};
+
+/* if PiP closes -> stop video */
+playerVideo.addEventListener('leavepictureinpicture',()=>{
+  stopAll();
+});
+
+/* click outside video or ESC exits fullscreen */
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){
+    if(document.fullscreenElement) document.exitFullscreen().catch(()=>{});
+    overlay.classList.remove('active'); overlay.setAttribute('aria-hidden','true');
+    stopAll();
+  }
+});
+
+/* ------------------ Channel UI ------------------ */
+function toggleFav(n,el){
+  const i=favorites.indexOf(n);
+  if(i===-1){favorites.push(n);el.textContent='❤';}
+  else{favorites.splice(i,1);el.textContent='♡';}
+  localStorage.setItem('iptv_favs',JSON.stringify(favorites));
+}
+function groupChannels(list){
+  const g={};
+  list.forEach(c=>{
+    const cat=c.category||c.group||'Uncategorized';
+    if(!g[cat])g[cat]=[];
+    g[cat].push(c);
+  });
+  return g;
+}
+function scrollRow(btn,dir){
+  btn.closest('.row-header').nextElementSibling.scrollBy({left:dir*420,behavior:'smooth'});
+}
+function createRow(title,channels){
+  const r=document.createElement('div');
+  r.className='row';
+  const h=document.createElement('div');
+  h.className='row-header';
+  h.innerHTML=`<div class="row-title"><strong>${title}</strong></div>
+               <div><button class="btn" onclick="scrollRow(this,-1)">◀</button>
+               <button class="btn" onclick="scrollRow(this,1)">▶</button></div>`;
+  const car=document.createElement('div');
+  car.className='carousel';
+  channels.forEach(c=>{
+    const card=document.createElement('div');
+    card.className='card';
+    card.innerHTML=`${c.live?'<div class="badge-live">LIVE</div>':''}
+      <div class="fav-toggle" data-name="${c.name}">${favorites.includes(c.name)?'❤':'♡'}</div>
+      <img src="${c.logo||'logo.png'}"><div class="name">${c.name}</div>`;
+    card.querySelector('.fav-toggle').onclick=(ev)=>{ev.stopPropagation();toggleFav(c.name,ev.target);};
+    card.onclick=()=>openPlayer(c);
+    car.appendChild(card);
+  });
+  r.appendChild(h); r.appendChild(car); content.appendChild(r);
+}
+function renderHome(f=''){
+  content.innerHTML='';
+  const g=groupChannels(combinedChannels);
+  const favs=combinedChannels.filter(c=>favorites.includes(c.name));
+  if(favs.length)createRow('Favorites',favs);
+  Object.keys(g).forEach(cat=>{
+    const rows=g[cat].filter(ch=>ch.name.toLowerCase().includes(f.toLowerCase()));
+    if(rows.length)createRow(cat,rows);
+  });
+}
+searchInput.oninput=e=>renderHome(e.target.value);
+favoritesTab.onclick=()=>renderHome('');
+
+/* ------------------ Playlist Loader ------------------ */
+async function loadPlaylist(){
+  try{
+    const res=await fetch("https://raw.githubusercontent.com/PRENDLYMADAPAKER/ANG-KALAT-MO/refs/heads/main/IPTVPREMIUM.m3u");
+    const text=await res.text();
+    const lines=text.split('\n');let chs=[],current={};
+    for(let line of lines){
+      line=line.trim();
+      if(line.startsWith('#EXTINF')){
+        const name=line.split(',').pop();
+        const logo=line.match(/tvg-logo="(.*?)"/)?.[1]||'';
+        const group=line.match(/group-title="(.*?)"/)?.[1]||'';
+        current={name,logo,group,type:'hls'};
+      }else if(line&&line.startsWith('http')){current.url=line;chs.push(current);}
+    }
+    combinedChannels=chs; renderHome('');
+  }catch(e){console.error(e);}
+}
+window.addEventListener('load',loadPlaylist);
+
+/* ------------------ PWA Install ------------------ */
+let deferredPrompt; const installBtn=document.getElementById('installBtn');
+const popup=document.getElementById('installPopup'); const popupInstall=document.getElementById('popupInstall');
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;installBtn.style.display='inline-block';setTimeout(()=>popup.style.display='flex',3000);});
+async function showInstallPrompt(){if(!deferredPrompt){popup.style.display='none';return;}
+  deferredPrompt.prompt();await deferredPrompt.userChoice;popup.style.display='none';deferredPrompt=null;}
+installBtn.onclick=showInstallPrompt;popupInstall.onclick=showInstallPrompt;
+</script>
+</body>
+</html>

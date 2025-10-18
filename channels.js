@@ -1429,17 +1429,14 @@ const combinedChannels = [
     "0f856fa0412b11edb8780242ac120002": "783374273ef97ad3bc992c1d63e091e7"
   }
   },
-  { 
-  name: "tvN Movies", 
-  type: "dash", 
-  category: "World TV", 
-  live: true,
-  logo: "https://i.imgur.com/c4XvwO2.png",
-  url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/2406/default_ott.mpd",
-  drm: {
-    licenseType: "clearkey",
-    licenseKey: "8e269c8aa32ad77eb83068312343d610:d12ccebafbba2a535d88a3087f884252",
-    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-  }
+    {
+    name: "tvN Movies",
+    logo: "https://i.imgur.com/c4XvwO2.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/2406/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: {
+      "8e269c8aa32ad77eb83068312343d610": "d12ccebafbba2a535d88a3087f884252"
+    }
 },
 ];

@@ -639,19 +639,21 @@ const combinedChannels = [
     logo: "https://static.wikia.nocookie.net/animax/images/b/b8/Aniplus_Asia_Logo.png",
     category: "Anime/Cartoons", live: true,
   },
-
-  {
-  name: "Cartoon Network HD",
-  type: "dash",
-  url: "http://linearjitp-playback.astro.com.my/dash-wv/linear/509/default_ott.mpd",
-  logo: "https://i.imgur.com/l7p2MpK.png",
-  category: "Anime/Cartoons", live: true,
-  clearKey: {
-    "1a05bebf706408431a390c3f9f40f410": "89c5ff9f8e65c7fe966afbd2f9128e5f"
-  }
+  { name: "Cartoon Network HD", type: "dash", category: "Anime/Cartoons", live: true,
+    logo: "https://i.imgur.com/l7p2MpK.png",
+    url: "http://linearjitp-playback.astro.com.my/dash-wv/linear/509/default_ott.mpd",
+    license: {
+      type: "clearkey",
+      keyId: "1a05bebf706408431a390c3f9f40f410",
+      key: "89c5ff9f8e65c7fe966afbd2f9128e5f"
+    },
+    headers: {
+      referer: "https://astrogo.astro.com.my//",
+      "user-agent": "Mozilla/5.0 (Linux; Android 10; MI 9 Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/111.0.5563.58 Mobile Safari/537.36"
+    }
   },
   {
-  name: "DreamWorks Tagalized (HD)",
+  name: "DreamWorks(HD)",
   type: "dash",
   url: "https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_dreamworks_hd1/default/index.mpd",
   logo: "https://i.imgur.com/cgfKSDP.png",

@@ -107,6 +107,38 @@ const combinedChannels = [
     logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/syfy-us.png?raw=true",
     url: "https://fl51.moveonjoy.com/SYFY/index.m3u8" },
 
+  { name: "Boomerang", type: "hls", category: "Anime/Cartoons", live: true,
+    logo: "http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s21883_dark_360w_270h.png",
+    url: "https://fl51.moveonjoy.com/BOOMERANG/index.m3u8" },
+
+  { name: "Disney Channel US", type: "hls", category: "Anime/Cartoons", live: true,
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/2014_Disney_Channel_logo.svg/300px-2014_Disney_Channel_logo.svg.png",
+    url: "https://fl51.moveonjoy.com/DISNEY/index.m3u8" },
+
+  { name: "Disney JR US", type: "hls", category: "Anime/Cartoons", live: true,
+    logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/disney-jr-us.png?raw=true",
+    url: "https://fl51.moveonjoy.com/DISNEY_JR/index.m3u8" },
+
+  { name: "Disney XD US", type: "hls", category: "Anime/Cartoons", live: true,
+    logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/canada/disney-xd-ca.png?raw=true",
+    url: "https://fl51.moveonjoy.com/DISNEY_XD/index.m3u8" },
+
+  { name: "Nickelodeon", type: "hls", category: "Anime/Cartoons", live: true,
+    logo: "https://i.imgur.com/kbIi1V6.png",
+    url: "https://fl51.moveonjoy.com/NICKELODEON/index.m3u8" },
+
+  { name: "Nick Jr.", type: "hls", category: "Anime/Cartoons", live: true,
+    logo: "https://i.imgur.com/eaUHjP6.png",
+    url: "https://fl51.moveonjoy.com/NICK_JR/index.m3u8" },
+
+  { name: "Nicktoons", type: "hls", category: "Anime/Cartoons", live: true,
+    logo: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Nicktoons.png",
+    url: "https://fl51.moveonjoy.com/NICKTOONS/index.m3u8" },
+
+  { name: "Teen Nick", type: "hls", category: "Anime/Cartoons", live: true,
+    logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/teen-nick-us.png?raw=true",
+    url: "https://fl51.moveonjoy.com/Teen_Nick/index.m3u8" },
+
   /* ---------- DASH STREAMS (ClearKey) ---------- */
   {
     name: "A2Z",

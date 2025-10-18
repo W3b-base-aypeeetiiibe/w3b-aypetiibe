@@ -1439,4 +1439,384 @@ const combinedChannels = [
       "8e269c8aa32ad77eb83068312343d610": "d12ccebafbba2a535d88a3087f884252"
     }
 },
+  {
+    name: "One",
+    logo: "https://i.pinimg.com/736x/68/62/cd/6862cd5ce275ab4faaa8630f25f89860.jpg",
+    url: "http://linearjitp-playback.astro.com.my/dash-wv/linear/2702/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "d8fe398c79065173fa9788f226056510": "45e77e6a8ba767b63cacfdb01ef2ac29" }
+  },
+  {
+    name: "tvN Premium",
+    logo: "https://i.imgur.com/eE9IBhJ.png",
+    url: "http://linearjitp-playback.astro.com.my/dash-wv/linear/1001/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "faf4d62bb898de503446c28fb1aa9210": "19e80ecc5d337215c64004cb49c9cb01" }
+  },
+  {
+    name: "Kplus",
+    logo: "https://i.imgur.com/Nd9gqA2.png",
+    url: "http://linearjitp-playback.astro.com.my/dash-wv/linear/9983/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "aa48b28bd723f91214887df6ed9fad10": "b5a3a800848120c843ae0fa68c09c261" }
+  },
+  {
+    name: "KBS World",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjrxyZu1bPiJ3SdGvhVf3d3Muj5AqQ7ZkGpw&s",
+    url: "http://linearjitp-playback.astro.com.my/dash-wv/linear/2306/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "692950d39869c92af9a9ddea453c0d10": "eadc626ab959255f7ab881c03d306fe2" }
+  },
+  {
+    name: "Hits",
+    logo: "https://i.imgur.com/YeqyD9W.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/606/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "1fe92685a75944dc54c9dac124802510": "36cb2063bf5338d18d31657371b15817" }
+  },
+  {
+    name: "AXN HD",
+    logo: "https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/131_144.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/2303/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "c24a7811d9ab46b48b46a839f89a1210": "c321afe1689b07d5bde55bd4097120f3" }
+  },
+  {
+    name: "HITS Movies",
+    logo: "https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/391_144.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/2305/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "ff1fe1d7018d0dd711601e795e0d6210": "38fbee3a56e40ff92c9df8acbca7bd86" }
+  },
+  {
+    name: "Astro BOO",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/c/c0/Astro_Boo_%282024%29.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/2407/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "ea4d51ade01bbf3960e0de973051ba10": "f3266bec607f25879f48640f30f1c888" }
+  },
+  {
+    name: "HBO Hits",
+    logo: "https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/449_144.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/5055/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "5d600eb70944d681c26c1f48fbe61f10": "796139ba05a2ab425f978c7fd98b4372" }
+  },
+  {
+    name: "HBO Family",
+    logo: "https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/450_144.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/5053/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "2b9ff7cc1a3dc9fef47cc5773472d510": "7e37588e893ab9252e505bd6dda35beb" }
+  },
+  {
+    name: "Cinemax",
+    logo: "https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/337_144.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/603/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "ef9b2a8d39151cc39f4b51d761b3e704": "13cc535ad4a73201147863cac386cdd3" }
+  },
+  {
+    name: "Celestial Movies",
+    logo: "https://i.imgur.com/Mb5ssnu.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/506/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "c5c1ba26907291afec11a9a78d513410": "361197805d0149c29801946cf2dde67c" }
+  },
+  {
+    name: "Discovery Channel",
+    logo: "https://cantseeus.com/wp-content/uploads/2023/10/discov.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/2510/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "276767a578aae2eacb284247ccd9eb10": "03ef88df1a47669e5459e105e3b535b1" }
+  },
+  {
+    name: "Discovery Asia",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f0/Discovery-asia.png/220px-Discovery-asia.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/501/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "3ff02fc980c2e3230c52ae70fe903410": "c3a58ec867cc25829e1fbe893844254c" }
+  },
+  {
+    name: "History",
+    logo: "https://cantseeus.com/wp-content/uploads/2023/10/History_28201529.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/604/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "3feecc36930732cbb69306dc687c6f10": "3458265f7530bf1fef204ca8cb4689db" }
+  },
+  {
+    name: "Crime & Investigation",
+    logo: "https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/369_144.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/2111/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "22fc6faf47ae3b6322bc244206bbb910": "db1ee2e2652e46aac65049ef3e493787" }
+  },
+  {
+    name: "BBC Earth",
+    logo: "https://imgur.com/QMB9sFW.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/5051/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "d3f62ff0804bc5b8d523ef009d786310": "bb1bdb27cc5fe1ec637d257999344cc3" }
+  },
+  {
+    name: "BBC Lifestyle",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/BBC_Lifestyle2.svg/1200px-BBC_Lifestyle2.svg.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/5050/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "f429292dc744f284355308561577ac10": "b12e1f894129c517dc8845baaeebec8a" }
+  },
+  {
+    name: "Love Nature",
+    logo: "https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/483_144.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/5096/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "16bf5815468639fe4528b4bf0141f310": "775a654c06108046b4088c9a68888d9" }
+  },
+  {
+    name: "Global Trekker",
+    logo: "https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/482_144.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/5094/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "92d34a84fae8e54de0a829629941be10": "2fb39ab3f55333d5fa3e830ebf99ec16" }
+  },
+  {
+    name: "HGTV",
+    logo: "https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/198_144.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/2502/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "8c1bb309957bb8ca08390abebe198410": "2a695b046e7cf5811a634d1348446594" }
+  },
+  {
+    name: "TLC",
+    logo: "https://logo.iptveditor.com/tlc.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/2709/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "942ec156203b2aca1ddf3498f663c111": "7f9d6c69698ddefcb74553436cac7260" }
+  },
+  {
+    name: "Lifetime",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Logo_Lifetime_2020.svg/2560px-Logo_Lifetime_2020.svg.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/5052/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "8de11e005db5bd0db8228814863cd310": "1833beaf a4c82e68f74c4244d54906b0".replace(/ /g,"") }
+  },
+  {
+    name: "Asian Food Network",
+    logo: "https://i.imgur.com/O5jBcL2.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/500/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "346b9f41e2933748c8861f82932e0110": "cf0cffb637b81598a27bd6b0d90d65a8" }
+  },
+  {
+    name: "MTV Live",
+    logo: "https://static.epg.best/il/MTV.il.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/5014/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "3ac2542a4f7be746633db07647451710": "22f964a6d6927ccdba482e775cdf f190".replace(/ /g,"") }
+  },
+  {
+    name: "HITS Now",
+    logo: "https://aqfadtv.xyz/logos/HITSNow.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/5110/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKeyUrl: "https://ck-server.danng.me/?username=HishamKamarul&channelid=5110"
+  },
+  {
+    name: "Moonbug",
+    logo: "https://aqfadtv.xyz/logos/Moonbug.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/5067/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKeyUrl: "https://ck-dash-mpd.aqfadtv.xyz/dash-ck/linear/5067"
+  },
+  {
+    name: "Cartoon Network",
+    logo: "https://poster.starhubgo.com/Linear_channels2/316_1920x1080_HTV.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/509/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKeyUrl: "https://ck-dash-mpd.aqfadtv.xyz/dash-ck/linear/509"
+  },
+  {
+    name: "BBC World News",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/BBC_World_News_2022_%28Boxed%29.svg/2048px-BBC_World_News_2022_%28Boxed%29.svg.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/1008/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "01767d1c2315c0e9556f477fb1f0c710": "77ec0eeb21c07812fd7c58628366ccb3" }
+  },
+  {
+    name: "Channel News Asia",
+    logo: "https://i.imgur.com/vm9Z0uV.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/605/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "f812aeae6bb924a8181b512d5d79": "44275884ee394d42081f9e395ff6e415" }
+  },
+  {
+    name: "CNN",
+    logo: "http://115.146.176.131:80/images/2acf9495fde07739914e7a7bb3ffee94.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/2503/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "1b618a2919cce3912e5111dddfc4fd9b": "bf7e1b97555c4acb7455f711b2a9ff16" }
+  },
+  {
+    name: "Al Jazeera",
+    logo: "https://1000logos.net/wp-content/uploads/2023/01/Al-Jazeera-Logo.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/2110/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "b1fb d0874e7923f5b05929 810aa8184": "6c3c498113abffdf454dc935319a79d4".replace(/ /g,"") }
+  },
+  {
+    name: "Adult Swim",
+    logo: "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/canada/adult-swim-ca.png",
+    url: "https://a116aivottlinear-a.akamaihd.net/.../cenc.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "cc26110bb0d29d0e4452d42602846080": "4a2e5782e26a3e2d7dd0431205c14518" }
+  },
+  {
+    name: "Disney Channel",
+    logo: "http://apkip.tv/logos/Canada/DisneyChannel.ca.png",
+    url: "https://a77aivottepl-a.akamaihd.net/.../cenc.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "be9caaa813c5305e761c66ac63645901": "3d40f2990ec5362ca5be3a3c9bb8f8b4" }
+  },
+  {
+    name: "WWE Network",
+    logo: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/a77021bb-a973-4a9b-8902-47e05787b08f/d8txzp1-3f32b570-9b7f-437d-ad29-2df8cdbf554c.png",
+    url: "https://cfrt.stream.peacocktv.com/.../master.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "00208c93f4358213b52220898b962385": "8ae6063167228e350dd132d4a1573102" }
+  },
+  {
+    name: "W-Sport",
+    logo: "https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/503_144.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/5060/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "010cbb9cf1a01ead38070730d3 89c710": "9cd5c0d1e54c22e035d88dd8ddf2134c".replace(/ /g,"") }
+  },
+  {
+    name: "Crave 1",
+    logo: "https://the-bithub.com/crave1",
+    url: "https://live-crave.video.9c9media.com/.../crave1/manifest.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "4a107945066f45a9af2c32ea88be60f4": "df97e849d68479ec16e395feda7627d0" }
+  },
+  {
+    name: "Crave 2",
+    logo: "https://the-bithub.com/crave",
+    url: "https://live-crave.video.9c9media.com/.../crave2/manifest.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "4ac6eaaf0e5e4f94987cbb5b243b54e8": "8bb3f2f421f6afd025fa46c784944ad6" }
+  },
+  {
+    name: "Warner TV",
+    logo: "https://tse2.mm.bing.net/th/id/OIP.7d6tiaMYWpWIGI6iAN47zAHaG3",
+    url: "https://qp-pldt-live-grp-11-prod.akamaized.net/out/u/dr_warnertvhd.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "4503cf86bca3494ab95a77ed913619a0": "afc9c8f627fb3fb255dee8e3b0fe1d71" }
+  },
+  {
+    name: "MTV",
+    logo: "https://tse3.mm.bing.net/th/id/OIP.lMLVpSGutDFitqvokkgp6AHaHT",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/5014/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "3ac2542a4f7be746633db07647451710": "22f964a6d6927ccdba482e775cdff190" }
+  },
+  {
+    name: "Amazon Movies",
+    logo: "https://the-bithub.com/amznmovies",
+    url: "https://abbfefcaaaaaaaamd5xd44ij4vbyj.a17d0dfbc05b48999f461f3f6cff0eb6.emt.cf.ww.aiv-cdn.net/.../cenc.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "3e429eb91a1791d55df2a554dc58dda7": "2f688f94ef580a61eada6932598137e4" }
+  },
+  {
+    name: "iQIYI",
+    logo: "https://i.imgur.com/E63wJx9.png",
+    url: "https://linearjitp-playback.astro.com.my/dash-wv/linear/1006/default_ott.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "7ef7e913ce85a1131b27036069169a10": "77d98ed71db7524c27875a09a975f9e6" }
+  },
+    {
+  name: "GOLDEN TV",
+  logo: "https://static.wikia.nocookie.net/logopedia/images/c/cc/Golden_LA_%282020%29.png",
+  url: "http://live-atv-cdn.izzigo.tv/4/out/u/dash/GOLDEN-MULTIPLEX/manifest.mpd",
+  type: "dash",
+  group: "World TV",
+  clearKey: { "f23601997bc024ea96b6b9d1e2b8b3fc": "521a2cfdd3f649a9543422dc41fa4ca0" }
+      },
+  {
+    name: "Syfy East",
+    logo: "https://static.wikia.nocookie.net/tv-philippines/images/c/c9/Syfy.png",
+    url: "http://212.102.60.10/SYFY/index.m3u8",
+    type: "hls",
+    group: "World TV"
+  },
+  {
+    name: "Sundance TV East",
+    logo: "https://www.directhd.tv/wp-content/uploads/2018/09/sundance-tv.jpg",
+    url: "http://212.102.60.10/SUNDANCE/index.m3u8",
+    type: "hls",
+    group: "World TV"
+  },
+  {
+    name: "Starz Encore Action East",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVD8N4I_8GnW8WpD-bplQMFYTE4l9ubGA1QA&s",
+    url: "http://212.102.60.10/STARZ_ENCORE_ACTION/index.m3u8",
+    type: "hls",
+    group: "World TV"
+  },
+  {
+    name: "Sony Movies",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyDVgr1_NsLMd-tRFReibc4xyOUBin19lr6w&s",
+    url: "https://a-cdn.klowdtv.com/live1/smc_720p/playlist.m3u8",
+    type: "hls",
+    group: "World TV"
+  },
+  {
+    name: "GOLDEN TV",
+    logo: "https://static.wikia.nocookie.net/logopedia/images/c/cc/Golden_LA_%282020%29.png",
+    url: "http://live-atv-cdn.izzigo.tv/4/out/u/dash/GOLDEN-MULTIPLEX/manifest.mpd",
+    type: "dash",
+    group: "World TV",
+    clearKey: { "f23601997bc024ea96b6b9d1e2b8b3fc": "521a2cfdd3f649a9543422dc41fa4ca0" }
+  },
 ];

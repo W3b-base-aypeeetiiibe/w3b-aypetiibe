@@ -1442,7 +1442,7 @@ const combinedChannels = [
     {
     name: "One",
     logo: "https://i.pinimg.com/736x/68/62/cd/6862cd5ce275ab4faaa8630f25f89860.jpg",
-    url: "https://cors-proxy.elfsight.dev/http://linearjitp-playback.astro.com.my/dash-wv/linear/2702/default_ott.mpd",
+    url: "https://cors-proxy.fringe.zone/http://linearjitp-playback.astro.com.my/dash-wv/linear/2702/default_ott.mpd",
     type: "dash",
     category: "World TV",
     clearKey: {

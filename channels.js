@@ -1439,13 +1439,15 @@ const combinedChannels = [
       "8e269c8aa32ad77eb83068312343d610": "d12ccebafbba2a535d88a3087f884252"
     }
 },
-  {
+    {
     name: "One",
     logo: "https://i.pinimg.com/736x/68/62/cd/6862cd5ce275ab4faaa8630f25f89860.jpg",
     url: "http://linearjitp-playback.astro.com.my/dash-wv/linear/2702/default_ott.mpd",
     type: "dash",
-    group: "World TV",
-    clearKey: { "d8fe398c79065173fa9788f226056510": "45e77e6a8ba767b63cacfdb01ef2ac29" }
+    category: "World TV",
+    clearKey: {
+      "d8fe398c79065173fa9788f226056510": "45e77e6a8ba767b63cacfdb01ef2ac29"
+    }
   },
   {
     name: "tvN Premium",

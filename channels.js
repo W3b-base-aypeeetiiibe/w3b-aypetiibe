@@ -19,6 +19,18 @@ const combinedChannels = [
     logo: "https://i.imgur.com/OBUDDAp.jpeg",
     url: "https://stream.gmaNews.tv/ioslive/livestream/playlist.m3u8" },
 
+  { name: "FX", type: "hls", category: "Movie Channels", live: true,
+    logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/fx-us.png?raw=true",
+    url: "https://fl51.moveonjoy.com/FX/index.m3u8" },
+
+  { name: "FXM", type: "hls", category: "Movie Channels", live: true,
+    logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/fxm-movie-channel-us.png?raw=true",
+    url: "https://fl51.moveonjoy.com/FX_MOVIE/index.m3u8" },
+
+  { name: "FXX", type: "hls", category: "Movie Channels", live: true,
+    logo: "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/fxx-us.png?raw=true",
+    url: "https://fl51.moveonjoy.com/FXX/index.m3u8" },
+
   /* ---------- DASH STREAMS (ClearKey) ---------- */
   {
     name: "A2Z",
